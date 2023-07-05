@@ -2,12 +2,38 @@ package com.simonorono.advent_of_code.solutions.y2015
 
 import com.simonorono.advent_of_code.lib.Day
 
-object Day01 : Day() {
+object Day01 : Day(2015, 1) {
+    private val input = getInput()
+
     override fun part1(): String {
-        return "--"
+        var position = 0
+
+        for (c in input) {
+            when (c) {
+                '(' -> position++
+                ')' -> position--
+                else -> {}
+            }
+        }
+
+        return position.toString()
     }
 
     override fun part2(): String {
-        return "--"
+        var position = 0
+
+        for (c in input.withIndex()) {
+            when (c.value) {
+                '(' -> position++
+                ')' -> position--
+                else -> {}
+            }
+
+            if (position == -1) {
+                return "${c.index + 1}"
+            }
+        }
+
+        throw IllegalStateException()
     }
 }
