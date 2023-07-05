@@ -6,7 +6,6 @@ abstract class Day(private val year: Int, private val day: Int) {
             .classLoader
             .getResource("input/$year/day$day.txt")!!
             .readText()
-            .trimEnd()
     }
 
     abstract fun part1(): String

@@ -29,7 +29,7 @@ class DownloadInput : CliktCommand(help = "downloads your input files") {
             file.createNewFile()
         }
 
-        file.writeText(content)
+        file.writeText(content.trimEnd())
     }
 
     override fun run() {
