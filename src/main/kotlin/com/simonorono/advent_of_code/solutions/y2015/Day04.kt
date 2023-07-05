@@ -12,7 +12,7 @@ object Day04 : Day(2015, 4) {
     }
 
     private fun getMD5UntilCondition(condition: (ByteArray) -> Boolean): Int {
-        var current = 282748
+        var current = 1
 
         while (true) {
             if (condition("$input$current".getMD5())) {
@@ -26,7 +26,7 @@ object Day04 : Day(2015, 4) {
         return getMD5UntilCondition {
             it[0] == 0.toByte() &&
                     it[1] == 0.toByte() &&
-                    (it[2].toInt().shl(4).and(0xF)).toByte() == 0.toByte()
+                    (it[2].toInt().shr(4).and(0xF)).toByte() == 0.toByte()
         }.toString()
     }
 
