@@ -8,5 +8,5 @@ class AOC : CliktCommand() {
 }
 
 fun main(args: Array<String>) {
-    AOC().subcommands(DownloadInput()).main(args)
+    AOC().subcommands(DownloadInput(), Run()).main(args)
 }
