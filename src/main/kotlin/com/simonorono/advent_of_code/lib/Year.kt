@@ -6,8 +6,8 @@ abstract class Year(private val year: Int) {
     fun execute() {
         println("Year: $year:")
 
-        days.withIndex().forEach {
-            it.value.execute(it.index + 1)
+        days.forEach {
+            it.execute()
         }
     }
 }

@@ -13,7 +13,7 @@ abstract class Day(private val year: Int, private val day: Int) {
 
     abstract fun part2(): String
 
-    fun execute(day: Int) {
+    fun execute() {
         println("Day $day:")
         println("Part 1: ${part1()}")
         println("Part 2: ${part2()}")
