@@ -13,6 +13,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.github.ajalt.clikt:clikt:4.0.0")
     testImplementation(kotlin("test"))
 }
 
@@ -21,5 +22,5 @@ tasks.test {
 }
 
 application {
-    mainClass.set("MainKt")
+    mainClass.set("com.simonorono.advent_of_code.MainKt")
 }
