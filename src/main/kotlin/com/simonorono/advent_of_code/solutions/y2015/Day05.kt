@@ -1,0 +1,34 @@
+package com.simonorono.advent_of_code.solutions.y2015
+
+import com.simonorono.advent_of_code.lib.Day
+
+object Day05 : Day(2015, 5) {
+    private val badCombinations = arrayOf("ab", "cd", "pq", "xy")
+
+    private val input = getInput().lines()
+
+    private fun String.isNice1(): Boolean {
+        if (badCombinations.any { this.contains(it) }) {
+            return false
+        }
+
+        if (this.count { "aeiou".contains(it) } < 3) {
+            return false
+        }
+
+        return this.matches(""".*(.)\1.*""".toRegex())
+    }
+
+    private fun String.isNice2(): Boolean {
+        return this.matches(""".*(..).*\1.*""".toRegex()) &&
+                this.matches(""".*(.).\1.*""".toRegex())
+    }
+
+    override fun part1(): String {
+        return input.count { it.isNice1() }.toString()
+    }
+
+    override fun part2(): String {
+        return input.count { it.isNice2() }.toString()
+    }
+}
