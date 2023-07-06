@@ -1,6 +1,6 @@
 package com.simonorono.advent_of_code.lib
 
-abstract class Day(private val year: Int, private val day: Int) {
+abstract class Day(private val year: Int, val day: Int) {
     fun getInput(): String {
         return javaClass
             .classLoader
