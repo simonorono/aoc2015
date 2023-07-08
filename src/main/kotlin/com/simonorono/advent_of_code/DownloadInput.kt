@@ -3,7 +3,7 @@ package com.simonorono.advent_of_code
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.arguments.argument
 import java.io.File
-import java.net.URL
+import java.net.URI
 import java.nio.charset.Charset
 
 const val MIN_YEAR = 2015
@@ -13,7 +13,7 @@ class DownloadInput : CliktCommand(help = "downloads your input files") {
     private val sessionCookie by argument(name = "session cookie")
 
     private fun getInput(year: Int, day: Int): String {
-        val url = URL("https://adventofcode.com/$year/day/$day/input")
+        val url = URI("https://adventofcode.com/$year/day/$day/input").toURL()
 
         return url.openConnection().apply {
             setRequestProperty("Cookie", "session=$sessionCookie")
