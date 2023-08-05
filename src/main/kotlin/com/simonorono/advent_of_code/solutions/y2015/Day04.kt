@@ -11,6 +11,8 @@ object Day04 : Day(2015, 4) {
         return md5.digest(this.toByteArray())
     }
 
+    private inline val Int.b get() = this.toByte()
+
     private fun getMD5UntilCondition(condition: (ByteArray) -> Boolean): Int {
         var current = 1
 
@@ -24,15 +26,13 @@ object Day04 : Day(2015, 4) {
 
     override fun part1(): String {
         return getMD5UntilCondition {
-            it[0] == 0.toByte() &&
-                    it[1] == 0.toByte() &&
-                    (it[2].toInt().shr(4).and(0xF)).toByte() == 0.toByte()
+            it[0] == 0.b && it[1] == 0.b && (it[2].toInt().shr(4).and(0xF)).b == 0.b
         }.toString()
     }
 
     override fun part2(): String {
         return getMD5UntilCondition {
-            it[0] == 0.toByte() && it[1] == 0.toByte() && it[2] == 0.toByte()
+            it[0] == 0.b && it[1] == 0.b && it[2] == 0.b
         }.toString()
     }
 }
