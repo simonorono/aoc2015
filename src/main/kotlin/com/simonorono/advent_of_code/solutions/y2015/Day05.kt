@@ -4,6 +4,9 @@ import com.simonorono.advent_of_code.lib.Day
 
 object Day05 : Day(2015, 5) {
     private val badCombinations = arrayOf("ab", "cd", "pq", "xy")
+    private val letterTwiceInARowRegex = """.*(.)\1.*""".toRegex()
+    private val twoPairOfLettersTwiceWithoutOverlapping = """.*(..).*\1.*""".toRegex()
+    private val sameLetterWithExactlyOneInBetween = """.*(.).\1.*""".toRegex()
 
     private val input = getInput().lines()
 
@@ -16,12 +19,11 @@ object Day05 : Day(2015, 5) {
             return false
         }
 
-        return this.matches(""".*(.)\1.*""".toRegex())
+        return this.matches(letterTwiceInARowRegex)
     }
 
     private fun String.isNice2(): Boolean {
-        return this.matches(""".*(..).*\1.*""".toRegex()) &&
-                this.matches(""".*(.).\1.*""".toRegex())
+        return this.matches(twoPairOfLettersTwiceWithoutOverlapping) && this.matches(sameLetterWithExactlyOneInBetween)
     }
 
     override fun part1(): String {
