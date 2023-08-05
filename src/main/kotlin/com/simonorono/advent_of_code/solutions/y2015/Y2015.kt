@@ -5,5 +5,5 @@ import com.simonorono.advent_of_code.lib.Year
 
 object Y2015 : Year(2015) {
     override val days: Array<Day>
-        get() = arrayOf(Day01, Day02, Day03, Day04, Day05)
+        get() = arrayOf(Day01, Day02, Day03, Day04, Day05, Day06)
 }
