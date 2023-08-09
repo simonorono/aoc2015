@@ -3,7 +3,7 @@ package com.simonorono.advent_of_code.solutions.y2018
 import com.simonorono.advent_of_code.lib.Day
 
 object Day02 : Day(2018, 2) {
-    val input = getInput().lines()
+    private val input = getInput().lines()
 
     override fun part1(): String {
         val counts = input.map { it.toCharArray().toList() }
