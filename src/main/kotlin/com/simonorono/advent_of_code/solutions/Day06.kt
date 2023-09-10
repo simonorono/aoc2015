@@ -11,15 +11,15 @@ object Day06 : Day(6) {
         companion object {
             fun getOp(line: String): Op {
                 if (line.startsWith("turn on")) {
-                    return TurnOn;
+                    return TurnOn
                 }
 
                 if (line.startsWith("turn off")) {
-                    return TurnOff;
+                    return TurnOff
                 }
 
                 if (line.startsWith("toggle")) {
-                    return Toggle;
+                    return Toggle
                 }
 
                 throw IllegalStateException()
