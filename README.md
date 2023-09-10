@@ -5,7 +5,7 @@
 First download all inputs.
 
 ```bash
-$ ./gradlew run --args "download-input < insert here your session cookie value>"
+$ ./gradlew run --args "download-input <insert here your session cookie value>"
 ```
 
 Then you can run the solutions:
