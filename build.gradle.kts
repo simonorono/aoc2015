@@ -20,5 +20,5 @@ tasks.test {
 }
 
 application {
-    mainClass.set("com.simonorono.advent_of_code.MainKt")
+    mainClass.set("com.simonorono.aoc2015.MainKt")
 }
