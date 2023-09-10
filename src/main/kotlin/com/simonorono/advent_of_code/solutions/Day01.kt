@@ -1,8 +1,8 @@
-package com.simonorono.advent_of_code.solutions.y2015
+package com.simonorono.advent_of_code.solutions
 
 import com.simonorono.advent_of_code.lib.Day
 
-object Day01 : Day(2015, 1) {
+object Day01 : Day(1) {
     private val input = getInput()
 
     override fun part1(): String {

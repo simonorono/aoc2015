@@ -1,9 +1,9 @@
-package com.simonorono.advent_of_code.solutions.y2015
+package com.simonorono.advent_of_code.solutions
 
 import com.simonorono.advent_of_code.lib.Day
 import java.security.MessageDigest
 
-object Day04 : Day(2015, 4) {
+object Day04 : Day(4) {
     private val input = getInput()
     private val md5 = MessageDigest.getInstance("MD5")
 

@@ -1,10 +1,10 @@
 package com.simonorono.advent_of_code.lib
 
-abstract class Day(private val year: Int, val day: Int) {
+abstract class Day(val day: Int) {
     fun getInput(): String {
         return javaClass
             .classLoader
-            .getResource("input/$year/day$day.txt")!!
+            .getResource("input/day$day.txt")!!
             .readText()
     }
 

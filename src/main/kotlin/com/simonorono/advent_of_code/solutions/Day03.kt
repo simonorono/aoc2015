@@ -1,8 +1,8 @@
-package com.simonorono.advent_of_code.solutions.y2015
+package com.simonorono.advent_of_code.solutions
 
 import com.simonorono.advent_of_code.lib.Day
 
-object Day03 : Day(2015, 3) {
+object Day03 : Day(3) {
     data class Visited(val x: Int, val y: Int) {
         fun next(direction: Char): Visited {
             return when (direction) {

@@ -1,8 +1,8 @@
-package com.simonorono.advent_of_code.solutions.y2015
+package com.simonorono.advent_of_code.solutions
 
 import com.simonorono.advent_of_code.lib.Day
 
-object Day05 : Day(2015, 5) {
+object Day05 : Day(5) {
     private val badCombinations = arrayOf("ab", "cd", "pq", "xy")
     private val letterTwiceInARowRegex = """.*(.)\1.*""".toRegex()
     private val twoPairOfLettersTwiceWithoutOverlapping = """.*(..).*\1.*""".toRegex()

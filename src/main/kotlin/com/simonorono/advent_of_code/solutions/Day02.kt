@@ -1,8 +1,8 @@
-package com.simonorono.advent_of_code.solutions.y2015
+package com.simonorono.advent_of_code.solutions
 
 import com.simonorono.advent_of_code.lib.Day
 
-object Day02 : Day(2015, 2) {
+object Day02 : Day(2) {
     data class Dimension(val l: Int, val w: Int, val h: Int) {
         private fun smallestSides(): List<Int> {
             val sides = arrayOf(l, w, h)

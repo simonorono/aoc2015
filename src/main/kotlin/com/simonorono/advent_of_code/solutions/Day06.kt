@@ -1,8 +1,8 @@
-package com.simonorono.advent_of_code.solutions.y2015
+package com.simonorono.advent_of_code.solutions
 
 import com.simonorono.advent_of_code.lib.Day
 
-object Day06 : Day(2015, 6) {
+object Day06 : Day(6) {
     enum class Op(val offset: Int) {
         TurnOn(8),
         TurnOff(9),
