@@ -1,4 +1,4 @@
-package com.simonorono.advent_of_code
+package com.simonorono.aoc2015
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.parameters.arguments.argument

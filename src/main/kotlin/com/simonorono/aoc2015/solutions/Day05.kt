@@ -1,6 +1,6 @@
-package com.simonorono.advent_of_code.solutions
+package com.simonorono.aoc2015.solutions
 
-import com.simonorono.advent_of_code.lib.Day
+import com.simonorono.aoc2015.lib.Day
 
 object Day05 : Day(5) {
     private val badCombinations = arrayOf("ab", "cd", "pq", "xy")

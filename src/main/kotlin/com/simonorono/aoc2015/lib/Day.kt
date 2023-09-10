@@ -1,4 +1,4 @@
-package com.simonorono.advent_of_code.lib
+package com.simonorono.aoc2015.lib
 
 abstract class Day(val day: Int) {
     fun getInput(): String {

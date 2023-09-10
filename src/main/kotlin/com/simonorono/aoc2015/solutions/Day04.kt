@@ -1,6 +1,6 @@
-package com.simonorono.advent_of_code.solutions
+package com.simonorono.aoc2015.solutions
 
-import com.simonorono.advent_of_code.lib.Day
+import com.simonorono.aoc2015.lib.Day
 import java.security.MessageDigest
 
 object Day04 : Day(4) {
