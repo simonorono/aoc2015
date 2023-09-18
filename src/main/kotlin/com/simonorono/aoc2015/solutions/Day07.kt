@@ -6,12 +6,6 @@ object Day07 : Day(7) {
     private val input = getInput().lines().map { parseInput(it) }
     private val values = mutableMapOf<String, UShort?>()
 
-    init {
-        input.forEach {
-            values[it.target] = null
-        }
-    }
-
     private enum class Operator {
         OR,
         AND,
