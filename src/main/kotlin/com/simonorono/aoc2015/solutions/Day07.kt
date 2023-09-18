@@ -45,17 +45,13 @@ object Day07 : Day(7) {
             val left = getValue(left)
             val right = getValue(right)
 
-            val res = when (op) {
+            return when (op) {
                 Operator.OR -> left.or(right)
                 Operator.AND -> left.and(right)
                 Operator.LSHIFT -> left.toUInt().shl(right.toInt()).toUShort()
                 Operator.RSHIFT -> left.toUInt().shr(right.toInt()).toUShort()
                 else -> throw IllegalStateException()
             }
-
-            values[target] = res
-
-            return res
         }
     }
 
@@ -67,14 +63,11 @@ object Day07 : Day(7) {
         override fun calculate(): UShort {
             val operand = getValue(operand)
 
-            val res = when (op) {
+            return when (op) {
                 Operator.NOT -> operand.inv()
                 Operator.YES -> operand
                 else -> throw IllegalStateException()
             }
-
-            values[this.operand] = res
-            return res
         }
     }
 
@@ -88,8 +81,11 @@ object Day07 : Day(7) {
             return target.toUShort()
         }
 
-        val op = input.find { it.target == target }!!
-        return op.calculate()
+        val res = (input.find { it.target == target }!!).calculate()
+
+        values[target] = res
+
+        return res
     }
 
     private fun parseInput(line: String): Op {
