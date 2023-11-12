@@ -15,6 +15,7 @@ object Year {
             Day08,
             Day09,
             Day10,
+            Day11,
         )
 
     fun execute(day: Int? = null) {
